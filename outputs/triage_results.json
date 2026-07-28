@@ -1,0 +1,509 @@
+{
+  "intern_code": "UBI-2026-0083",
+  "evidence_marker": "UBI-A5-74780BE0F17F",
+  "summary": {
+    "total_evaluated": 96,
+    "benign_count": 80,
+    "escalated_count": 16
+  },
+  "benign_candidates": [
+    {
+      "activityId": "REVIEW-0133",
+      "changeId": "CHG-622B7F9A4E",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0182",
+      "changeId": "CHG-E5BE48C520",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0183",
+      "changeId": "CHG-AF0D67FAD4",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0295",
+      "changeId": "CHG-67F2FB1638",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0334",
+      "changeId": "CHG-674BE357AF",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0311",
+      "changeId": "CHG-093FC12DF3",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0221",
+      "changeId": "CHG-288CFD254D",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0355",
+      "changeId": "CHG-5223078B55",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0265",
+      "changeId": "CHG-7A88CED99F",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0113",
+      "changeId": "CHG-9F230E05A1",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0097",
+      "changeId": "CHG-A923AE7C37",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0095",
+      "changeId": "CHG-AE7457D61D",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0153",
+      "changeId": "CHG-B98E66D00D",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0230",
+      "changeId": "CHG-4D84235E70",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0372",
+      "changeId": "CHG-33398D5AD5",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0316",
+      "changeId": "CHG-EEC7160C12",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0143",
+      "changeId": "CHG-F618788B78",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0086",
+      "changeId": "CHG-E6D3EDE493",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0285",
+      "changeId": "CHG-ABC22D0E73",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0054",
+      "changeId": "CHG-77E867A5D5",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0136",
+      "changeId": "CHG-D21A672D2F",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0034",
+      "changeId": "CHG-EA2D6A4FEE",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0114",
+      "changeId": "CHG-15B932258E",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0013",
+      "changeId": "CHG-19CD98E8F3",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0078",
+      "changeId": "CHG-E1814621FA",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0263",
+      "changeId": "CHG-37A000753E",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0129",
+      "changeId": "CHG-3EF9544273",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0181",
+      "changeId": "CHG-636EE0080E",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0353",
+      "changeId": "CHG-9CA39BC554",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0008",
+      "changeId": "CHG-0E167D8906",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0137",
+      "changeId": "CHG-C5E3081E8B",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0001",
+      "changeId": "CHG-0596213E91",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0246",
+      "changeId": "CHG-BFD266EF32",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0090",
+      "changeId": "CHG-1AEFFC580D",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0035",
+      "changeId": "CHG-DC848967E5",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0255",
+      "changeId": "CHG-81B0206383",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0017",
+      "changeId": "CHG-CA1083F044",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0048",
+      "changeId": "CHG-DBCF095567",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0036",
+      "changeId": "CHG-8AA3B0EF17",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0354",
+      "changeId": "CHG-B23BCE0983",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0244",
+      "changeId": "CHG-215A89247C",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0253",
+      "changeId": "CHG-F1CDFCC515",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0320",
+      "changeId": "CHG-7880E204BE",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0276",
+      "changeId": "CHG-E68052E5F2",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0174",
+      "changeId": "CHG-B56574D176",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0283",
+      "changeId": "CHG-AD26ECD06A",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0313",
+      "changeId": "CHG-5CC9D48282",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0007",
+      "changeId": "CHG-B1D9BCBDCB",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0206",
+      "changeId": "CHG-14ED26355B",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0286",
+      "changeId": "CHG-A9266D755C",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0056",
+      "changeId": "CHG-9F073D38D8",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0040",
+      "changeId": "CHG-D4749DB5B3",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0325",
+      "changeId": "CHG-76AF68E62D",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0115",
+      "changeId": "CHG-0EF3D7C848",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0240",
+      "changeId": "CHG-29F53C16BA",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0033",
+      "changeId": "CHG-7E3B2295AE",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0249",
+      "changeId": "CHG-795DACD632",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0329",
+      "changeId": "CHG-8881B0083E",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0110",
+      "changeId": "CHG-C4600BC30D",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0198",
+      "changeId": "CHG-5E40900BC3",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0121",
+      "changeId": "CHG-914A18CB9A",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0280",
+      "changeId": "CHG-3A6DE98CBA",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0069",
+      "changeId": "CHG-21B9AF2325",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0148",
+      "changeId": "CHG-1DC77B5745",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0104",
+      "changeId": "CHG-AF1ACDAF0F",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0016",
+      "changeId": "CHG-937AC03A03",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0190",
+      "changeId": "CHG-B2A7107272",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0300",
+      "changeId": "CHG-21B02542D4",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0146",
+      "changeId": "CHG-53FA9FD583",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0380",
+      "changeId": "CHG-9497BFD404",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0248",
+      "changeId": "CHG-FE089C0F5A",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0226",
+      "changeId": "CHG-DA1E878C47",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0235",
+      "changeId": "CHG-17A9495A42",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0306",
+      "changeId": "CHG-2A523C1CD0",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0165",
+      "changeId": "CHG-3BCD31DAA2",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0228",
+      "changeId": "CHG-B26BD691DD",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0305",
+      "changeId": "CHG-A1DC5F8D6F",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0042",
+      "changeId": "CHG-CBFD68F355",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0108",
+      "changeId": "CHG-A34C646EF5",
+      "disposition": "BENIGN"
+    },
+    {
+      "activityId": "REVIEW-0178",
+      "changeId": "CHG-E1ADD3429F",
+      "disposition": "BENIGN"
+    }
+  ],
+  "escalated_incidents": [
+    {
+      "activityId": "REVIEW-0151",
+      "changeId": "CHG-8D543FA382",
+      "reason": "Invalid status (PENDING)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0367",
+      "changeId": "CHG-959B73DFB1",
+      "reason": "Invalid status (PENDING)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0196",
+      "changeId": "CHG-9E2A8889BF",
+      "reason": "Invalid asset binding (asset-999)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0152",
+      "changeId": "CHG-700CBCFE22",
+      "reason": "Invalid asset binding (asset-999)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0339",
+      "changeId": "CHG-2A7A482073",
+      "reason": "Invalid status (PENDING)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0134",
+      "changeId": "CHG-E67D0BBCA5",
+      "reason": "Unapproved authority (requestor-only)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0245",
+      "changeId": "CHG-B3A19991BD",
+      "reason": "Unauthorized or invalid actor (svc-unapproved)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0026",
+      "changeId": "CHG-E21763CCAA",
+      "reason": "Unapproved authority (requestor-only)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0290",
+      "changeId": "CHG-BD1F41C97E",
+      "reason": "Unapproved authority (requestor-only)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0384",
+      "changeId": "CHG-F1A64C160F",
+      "reason": "Invalid asset binding (asset-999)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0087",
+      "changeId": "CHG-FEB74BC306",
+      "reason": "Invalid status (PENDING)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0028",
+      "changeId": "CHG-B0E03A440A",
+      "reason": "Invalid asset binding (asset-999)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0127",
+      "changeId": "CHG-C37C0AEADF",
+      "reason": "Invalid status (PENDING)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0271",
+      "changeId": "CHG-8DA88EDA24",
+      "reason": "Invalid status (PENDING)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0145",
+      "changeId": "CHG-119249FC5B",
+      "reason": "Unauthorized or invalid actor (svc-unapproved)",
+      "disposition": "ESCALATE"
+    },
+    {
+      "activityId": "REVIEW-0084",
+      "changeId": "CHG-A8D182B545",
+      "reason": "Invalid asset binding (asset-999)",
+      "disposition": "ESCALATE"
+    }
+  ]
+}

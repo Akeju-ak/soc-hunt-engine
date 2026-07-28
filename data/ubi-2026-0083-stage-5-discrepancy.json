@@ -1,0 +1,1455 @@
+{
+  "schemaVersion": "1.0",
+  "assignmentId": "SOC-A1-EE4ECD98CEFA",
+  "internCode": "UBI-2026-0083",
+  "instructions": [
+    "Investigate only the 96 review_candidates against the shared evidence pack.",
+    "Exactly 80 candidates have a valid benign explanation, but a record is valid only when activity, asset, actor, approval, status, and time window all reconcile.",
+    "The remaining 16 contain a wrong asset, wrong actor, invalid approver, pending status, or non-covering time window and must be escalated.",
+    "Do not classify from names or appearance; cite raw event locators and the controlling change record."
+  ],
+  "reviewCandidates": [
+    {
+      "activityId": "REVIEW-0133"
+    },
+    {
+      "activityId": "REVIEW-0182"
+    },
+    {
+      "activityId": "REVIEW-0183"
+    },
+    {
+      "activityId": "REVIEW-0295"
+    },
+    {
+      "activityId": "REVIEW-0334"
+    },
+    {
+      "activityId": "REVIEW-0311"
+    },
+    {
+      "activityId": "REVIEW-0221"
+    },
+    {
+      "activityId": "REVIEW-0151"
+    },
+    {
+      "activityId": "REVIEW-0355"
+    },
+    {
+      "activityId": "REVIEW-0265"
+    },
+    {
+      "activityId": "REVIEW-0367"
+    },
+    {
+      "activityId": "REVIEW-0113"
+    },
+    {
+      "activityId": "REVIEW-0097"
+    },
+    {
+      "activityId": "REVIEW-0095"
+    },
+    {
+      "activityId": "REVIEW-0153"
+    },
+    {
+      "activityId": "REVIEW-0230"
+    },
+    {
+      "activityId": "REVIEW-0196"
+    },
+    {
+      "activityId": "REVIEW-0372"
+    },
+    {
+      "activityId": "REVIEW-0316"
+    },
+    {
+      "activityId": "REVIEW-0143"
+    },
+    {
+      "activityId": "REVIEW-0086"
+    },
+    {
+      "activityId": "REVIEW-0285"
+    },
+    {
+      "activityId": "REVIEW-0054"
+    },
+    {
+      "activityId": "REVIEW-0136"
+    },
+    {
+      "activityId": "REVIEW-0034"
+    },
+    {
+      "activityId": "REVIEW-0114"
+    },
+    {
+      "activityId": "REVIEW-0152"
+    },
+    {
+      "activityId": "REVIEW-0013"
+    },
+    {
+      "activityId": "REVIEW-0078"
+    },
+    {
+      "activityId": "REVIEW-0263"
+    },
+    {
+      "activityId": "REVIEW-0129"
+    },
+    {
+      "activityId": "REVIEW-0181"
+    },
+    {
+      "activityId": "REVIEW-0353"
+    },
+    {
+      "activityId": "REVIEW-0339"
+    },
+    {
+      "activityId": "REVIEW-0008"
+    },
+    {
+      "activityId": "REVIEW-0137"
+    },
+    {
+      "activityId": "REVIEW-0134"
+    },
+    {
+      "activityId": "REVIEW-0001"
+    },
+    {
+      "activityId": "REVIEW-0245"
+    },
+    {
+      "activityId": "REVIEW-0246"
+    },
+    {
+      "activityId": "REVIEW-0090"
+    },
+    {
+      "activityId": "REVIEW-0035"
+    },
+    {
+      "activityId": "REVIEW-0255"
+    },
+    {
+      "activityId": "REVIEW-0026"
+    },
+    {
+      "activityId": "REVIEW-0017"
+    },
+    {
+      "activityId": "REVIEW-0048"
+    },
+    {
+      "activityId": "REVIEW-0036"
+    },
+    {
+      "activityId": "REVIEW-0354"
+    },
+    {
+      "activityId": "REVIEW-0244"
+    },
+    {
+      "activityId": "REVIEW-0253"
+    },
+    {
+      "activityId": "REVIEW-0320"
+    },
+    {
+      "activityId": "REVIEW-0276"
+    },
+    {
+      "activityId": "REVIEW-0290"
+    },
+    {
+      "activityId": "REVIEW-0174"
+    },
+    {
+      "activityId": "REVIEW-0283"
+    },
+    {
+      "activityId": "REVIEW-0313"
+    },
+    {
+      "activityId": "REVIEW-0007"
+    },
+    {
+      "activityId": "REVIEW-0384"
+    },
+    {
+      "activityId": "REVIEW-0087"
+    },
+    {
+      "activityId": "REVIEW-0206"
+    },
+    {
+      "activityId": "REVIEW-0286"
+    },
+    {
+      "activityId": "REVIEW-0056"
+    },
+    {
+      "activityId": "REVIEW-0040"
+    },
+    {
+      "activityId": "REVIEW-0325"
+    },
+    {
+      "activityId": "REVIEW-0115"
+    },
+    {
+      "activityId": "REVIEW-0240"
+    },
+    {
+      "activityId": "REVIEW-0033"
+    },
+    {
+      "activityId": "REVIEW-0028"
+    },
+    {
+      "activityId": "REVIEW-0249"
+    },
+    {
+      "activityId": "REVIEW-0329"
+    },
+    {
+      "activityId": "REVIEW-0110"
+    },
+    {
+      "activityId": "REVIEW-0198"
+    },
+    {
+      "activityId": "REVIEW-0121"
+    },
+    {
+      "activityId": "REVIEW-0280"
+    },
+    {
+      "activityId": "REVIEW-0069"
+    },
+    {
+      "activityId": "REVIEW-0127"
+    },
+    {
+      "activityId": "REVIEW-0148"
+    },
+    {
+      "activityId": "REVIEW-0104"
+    },
+    {
+      "activityId": "REVIEW-0016"
+    },
+    {
+      "activityId": "REVIEW-0271"
+    },
+    {
+      "activityId": "REVIEW-0190"
+    },
+    {
+      "activityId": "REVIEW-0300"
+    },
+    {
+      "activityId": "REVIEW-0146"
+    },
+    {
+      "activityId": "REVIEW-0145"
+    },
+    {
+      "activityId": "REVIEW-0084"
+    },
+    {
+      "activityId": "REVIEW-0380"
+    },
+    {
+      "activityId": "REVIEW-0248"
+    },
+    {
+      "activityId": "REVIEW-0226"
+    },
+    {
+      "activityId": "REVIEW-0235"
+    },
+    {
+      "activityId": "REVIEW-0306"
+    },
+    {
+      "activityId": "REVIEW-0165"
+    },
+    {
+      "activityId": "REVIEW-0228"
+    },
+    {
+      "activityId": "REVIEW-0305"
+    },
+    {
+      "activityId": "REVIEW-0042"
+    },
+    {
+      "activityId": "REVIEW-0108"
+    },
+    {
+      "activityId": "REVIEW-0178"
+    }
+  ],
+  "changeRecords": [
+    {
+      "changeId": "CHG-CBFD68F355",
+      "activityId": "REVIEW-0042",
+      "assetId": "asset-043",
+      "actor": "svc-007",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-15T09:13:42.000Z",
+      "endsAt": "2026-06-15T10:13:42.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-EA2D6A4FEE",
+      "activityId": "REVIEW-0034",
+      "assetId": "asset-035",
+      "actor": "svc-035",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-07T09:08:14.000Z",
+      "endsAt": "2026-06-07T10:08:14.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-A8D182B545",
+      "activityId": "REVIEW-0084",
+      "assetId": "asset-999",
+      "actor": "svc-013",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-01T06:57:24.000Z",
+      "endsAt": "2026-06-01T08:57:24.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-AD26ECD06A",
+      "activityId": "REVIEW-0283",
+      "assetId": "asset-044",
+      "actor": "svc-032",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-04T09:23:57.000Z",
+      "endsAt": "2026-06-04T10:23:57.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-14ED26355B",
+      "activityId": "REVIEW-0206",
+      "assetId": "asset-015",
+      "actor": "svc-027",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-11T09:48:33.000Z",
+      "endsAt": "2026-06-11T10:48:33.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-288CFD254D",
+      "activityId": "REVIEW-0221",
+      "assetId": "asset-030",
+      "actor": "svc-006",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-26T09:58:48.000Z",
+      "endsAt": "2026-06-26T10:58:48.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-5E40900BC3",
+      "activityId": "REVIEW-0198",
+      "assetId": "asset-007",
+      "actor": "svc-019",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-03T09:43:05.000Z",
+      "endsAt": "2026-06-03T10:43:05.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-D4749DB5B3",
+      "activityId": "REVIEW-0040",
+      "assetId": "asset-041",
+      "actor": "svc-005",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-13T09:12:20.000Z",
+      "endsAt": "2026-06-13T10:12:20.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-E68052E5F2",
+      "activityId": "REVIEW-0276",
+      "assetId": "asset-037",
+      "actor": "svc-025",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-25T09:19:10.000Z",
+      "endsAt": "2026-06-25T10:19:10.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-DA1E878C47",
+      "activityId": "REVIEW-0226",
+      "assetId": "asset-035",
+      "actor": "svc-011",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-03T08:45:00.000Z",
+      "endsAt": "2026-06-03T09:45:00.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-33398D5AD5",
+      "activityId": "REVIEW-0372",
+      "assetId": "asset-037",
+      "actor": "svc-013",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-09T09:07:33.000Z",
+      "endsAt": "2026-06-09T10:07:33.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-D21A672D2F",
+      "activityId": "REVIEW-0136",
+      "assetId": "asset-041",
+      "actor": "svc-029",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-25T09:00:43.000Z",
+      "endsAt": "2026-06-25T10:00:43.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-E1814621FA",
+      "activityId": "REVIEW-0078",
+      "assetId": "asset-031",
+      "actor": "svc-007",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-23T09:38:18.000Z",
+      "endsAt": "2026-06-23T10:38:18.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-AF1ACDAF0F",
+      "activityId": "REVIEW-0104",
+      "assetId": "asset-009",
+      "actor": "svc-033",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-21T09:56:04.000Z",
+      "endsAt": "2026-06-21T10:56:04.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-17A9495A42",
+      "activityId": "REVIEW-0235",
+      "assetId": "asset-044",
+      "actor": "svc-020",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-12T08:51:09.000Z",
+      "endsAt": "2026-06-12T09:51:09.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-914A18CB9A",
+      "activityId": "REVIEW-0121",
+      "assetId": "asset-026",
+      "actor": "svc-014",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-10T08:50:28.000Z",
+      "endsAt": "2026-06-10T09:50:28.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-67F2FB1638",
+      "activityId": "REVIEW-0295",
+      "assetId": "asset-008",
+      "actor": "svc-008",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-16T09:32:09.000Z",
+      "endsAt": "2026-06-16T10:32:09.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-2A523C1CD0",
+      "activityId": "REVIEW-0306",
+      "assetId": "asset-019",
+      "actor": "svc-019",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-27T09:39:40.000Z",
+      "endsAt": "2026-06-27T10:39:40.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-0E167D8906",
+      "activityId": "REVIEW-0008",
+      "assetId": "asset-009",
+      "actor": "svc-009",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-09T08:50:28.000Z",
+      "endsAt": "2026-06-09T09:50:28.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-8DA88EDA24",
+      "activityId": "REVIEW-0271",
+      "assetId": "asset-032",
+      "actor": "svc-020",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "PENDING",
+      "startsAt": "2026-06-20T06:30:45.000Z",
+      "endsAt": "2026-06-20T08:30:45.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-3BCD31DAA2",
+      "activityId": "REVIEW-0165",
+      "assetId": "asset-022",
+      "actor": "svc-022",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-26T09:20:32.000Z",
+      "endsAt": "2026-06-26T10:20:32.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-B2A7107272",
+      "activityId": "REVIEW-0190",
+      "assetId": "asset-047",
+      "actor": "svc-011",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-23T09:37:37.000Z",
+      "endsAt": "2026-06-23T10:37:37.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-FEB74BC306",
+      "activityId": "REVIEW-0087",
+      "assetId": "asset-040",
+      "actor": "svc-016",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "PENDING",
+      "startsAt": "2026-06-04T06:59:27.000Z",
+      "endsAt": "2026-06-04T08:59:27.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-53FA9FD583",
+      "activityId": "REVIEW-0146",
+      "assetId": "asset-003",
+      "actor": "svc-003",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-07T09:07:33.000Z",
+      "endsAt": "2026-06-07T10:07:33.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-AE7457D61D",
+      "activityId": "REVIEW-0095",
+      "assetId": "asset-048",
+      "actor": "svc-024",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-12T09:49:55.000Z",
+      "endsAt": "2026-06-12T10:49:55.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-8D543FA382",
+      "activityId": "REVIEW-0151",
+      "assetId": "asset-008",
+      "actor": "svc-008",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "PENDING",
+      "startsAt": "2026-06-12T06:25:58.000Z",
+      "endsAt": "2026-06-12T08:25:58.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-9497BFD404",
+      "activityId": "REVIEW-0380",
+      "assetId": "asset-045",
+      "actor": "svc-021",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-17T09:13:01.000Z",
+      "endsAt": "2026-06-17T10:13:01.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-B1D9BCBDCB",
+      "activityId": "REVIEW-0007",
+      "assetId": "asset-008",
+      "actor": "svc-008",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-08T08:49:47.000Z",
+      "endsAt": "2026-06-08T09:49:47.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-119249FC5B",
+      "activityId": "REVIEW-0145",
+      "assetId": "asset-002",
+      "actor": "svc-unapproved",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-06T06:21:52.000Z",
+      "endsAt": "2026-06-06T08:21:52.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-636EE0080E",
+      "activityId": "REVIEW-0181",
+      "assetId": "asset-038",
+      "actor": "svc-002",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-14T09:31:28.000Z",
+      "endsAt": "2026-06-14T10:31:28.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-795DACD632",
+      "activityId": "REVIEW-0249",
+      "assetId": "asset-010",
+      "actor": "svc-034",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-26T09:00:43.000Z",
+      "endsAt": "2026-06-26T10:00:43.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-21B02542D4",
+      "activityId": "REVIEW-0300",
+      "assetId": "asset-013",
+      "actor": "svc-013",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-21T09:35:34.000Z",
+      "endsAt": "2026-06-21T10:35:34.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-F1CDFCC515",
+      "activityId": "REVIEW-0253",
+      "assetId": "asset-014",
+      "actor": "svc-002",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-02T09:03:27.000Z",
+      "endsAt": "2026-06-02T10:03:27.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-19CD98E8F3",
+      "activityId": "REVIEW-0013",
+      "assetId": "asset-014",
+      "actor": "svc-014",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-14T08:53:53.000Z",
+      "endsAt": "2026-06-14T09:53:53.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-9F073D38D8",
+      "activityId": "REVIEW-0056",
+      "assetId": "asset-009",
+      "actor": "svc-021",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-01T09:23:16.000Z",
+      "endsAt": "2026-06-01T10:23:16.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-DBCF095567",
+      "activityId": "REVIEW-0048",
+      "assetId": "asset-001",
+      "actor": "svc-013",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-21T09:17:48.000Z",
+      "endsAt": "2026-06-21T10:17:48.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-215A89247C",
+      "activityId": "REVIEW-0244",
+      "assetId": "asset-005",
+      "actor": "svc-029",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-21T08:57:18.000Z",
+      "endsAt": "2026-06-21T09:57:18.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-A9266D755C",
+      "activityId": "REVIEW-0286",
+      "assetId": "asset-047",
+      "actor": "svc-035",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-07T09:26:00.000Z",
+      "endsAt": "2026-06-07T10:26:00.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-C4600BC30D",
+      "activityId": "REVIEW-0110",
+      "assetId": "asset-015",
+      "actor": "svc-003",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-27T10:00:10.000Z",
+      "endsAt": "2026-06-27T11:00:10.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-E6D3EDE493",
+      "activityId": "REVIEW-0086",
+      "assetId": "asset-039",
+      "actor": "svc-015",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-03T09:43:46.000Z",
+      "endsAt": "2026-06-03T10:43:46.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-B26BD691DD",
+      "activityId": "REVIEW-0228",
+      "assetId": "asset-037",
+      "actor": "svc-013",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-05T08:46:22.000Z",
+      "endsAt": "2026-06-05T09:46:22.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-37A000753E",
+      "activityId": "REVIEW-0263",
+      "assetId": "asset-024",
+      "actor": "svc-012",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-12T09:10:17.000Z",
+      "endsAt": "2026-06-12T10:10:17.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-9CA39BC554",
+      "activityId": "REVIEW-0353",
+      "assetId": "asset-018",
+      "actor": "svc-030",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-18T08:54:34.000Z",
+      "endsAt": "2026-06-18T09:54:34.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-FE089C0F5A",
+      "activityId": "REVIEW-0248",
+      "assetId": "asset-009",
+      "actor": "svc-033",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-25T09:00:02.000Z",
+      "endsAt": "2026-06-25T10:00:02.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-2A7A482073",
+      "activityId": "REVIEW-0339",
+      "assetId": "asset-004",
+      "actor": "svc-016",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "PENDING",
+      "startsAt": "2026-06-04T06:00:00.000Z",
+      "endsAt": "2026-06-04T08:00:00.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-ABC22D0E73",
+      "activityId": "REVIEW-0285",
+      "assetId": "asset-046",
+      "actor": "svc-034",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-06T09:25:19.000Z",
+      "endsAt": "2026-06-06T10:25:19.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-21B9AF2325",
+      "activityId": "REVIEW-0069",
+      "assetId": "asset-022",
+      "actor": "svc-034",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-14T09:32:09.000Z",
+      "endsAt": "2026-06-14T10:32:09.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-A34C646EF5",
+      "activityId": "REVIEW-0108",
+      "assetId": "asset-013",
+      "actor": "svc-001",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-25T09:58:48.000Z",
+      "endsAt": "2026-06-25T10:58:48.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-093FC12DF3",
+      "activityId": "REVIEW-0311",
+      "assetId": "asset-024",
+      "actor": "svc-024",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-04T09:43:05.000Z",
+      "endsAt": "2026-06-04T10:43:05.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-B98E66D00D",
+      "activityId": "REVIEW-0153",
+      "assetId": "asset-010",
+      "actor": "svc-010",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-14T09:12:20.000Z",
+      "endsAt": "2026-06-14T10:12:20.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-959B73DFB1",
+      "activityId": "REVIEW-0367",
+      "assetId": "asset-032",
+      "actor": "svc-008",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "PENDING",
+      "startsAt": "2026-06-04T06:19:08.000Z",
+      "endsAt": "2026-06-04T08:19:08.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-0EF3D7C848",
+      "activityId": "REVIEW-0115",
+      "assetId": "asset-020",
+      "actor": "svc-008",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-04T08:46:22.000Z",
+      "endsAt": "2026-06-04T09:46:22.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-1DC77B5745",
+      "activityId": "REVIEW-0148",
+      "assetId": "asset-005",
+      "actor": "svc-005",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-09T09:08:55.000Z",
+      "endsAt": "2026-06-09T10:08:55.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-5CC9D48282",
+      "activityId": "REVIEW-0313",
+      "assetId": "asset-026",
+      "actor": "svc-026",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-06T09:44:27.000Z",
+      "endsAt": "2026-06-06T10:44:27.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-E1ADD3429F",
+      "activityId": "REVIEW-0178",
+      "assetId": "asset-035",
+      "actor": "svc-035",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-11T09:29:25.000Z",
+      "endsAt": "2026-06-11T10:29:25.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-0596213E91",
+      "activityId": "REVIEW-0001",
+      "assetId": "asset-002",
+      "actor": "svc-002",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-02T08:45:41.000Z",
+      "endsAt": "2026-06-02T09:45:41.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-700CBCFE22",
+      "activityId": "REVIEW-0152",
+      "assetId": "asset-999",
+      "actor": "svc-009",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-13T06:26:39.000Z",
+      "endsAt": "2026-06-13T08:26:39.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-DC848967E5",
+      "activityId": "REVIEW-0035",
+      "assetId": "asset-036",
+      "actor": "svc-036",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-08T09:08:55.000Z",
+      "endsAt": "2026-06-08T10:08:55.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-4D84235E70",
+      "activityId": "REVIEW-0230",
+      "assetId": "asset-039",
+      "actor": "svc-015",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-07T08:47:44.000Z",
+      "endsAt": "2026-06-07T09:47:44.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-EEC7160C12",
+      "activityId": "REVIEW-0316",
+      "assetId": "asset-029",
+      "actor": "svc-029",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-09T09:46:30.000Z",
+      "endsAt": "2026-06-09T10:46:30.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-76AF68E62D",
+      "activityId": "REVIEW-0325",
+      "assetId": "asset-038",
+      "actor": "svc-002",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-18T09:52:39.000Z",
+      "endsAt": "2026-06-18T10:52:39.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-BFD266EF32",
+      "activityId": "REVIEW-0246",
+      "assetId": "asset-007",
+      "actor": "svc-031",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-23T08:58:40.000Z",
+      "endsAt": "2026-06-23T09:58:40.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-BD1F41C97E",
+      "activityId": "REVIEW-0290",
+      "assetId": "asset-003",
+      "actor": "svc-003",
+      "owner": "Security Engineering",
+      "approvedBy": "requestor-only",
+      "status": "APPROVED",
+      "startsAt": "2026-06-11T06:43:44.000Z",
+      "endsAt": "2026-06-11T08:43:44.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-29F53C16BA",
+      "activityId": "REVIEW-0240",
+      "assetId": "asset-001",
+      "actor": "svc-025",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-17T08:54:34.000Z",
+      "endsAt": "2026-06-17T09:54:34.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-622B7F9A4E",
+      "activityId": "REVIEW-0133",
+      "assetId": "asset-038",
+      "actor": "svc-026",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-22T08:58:40.000Z",
+      "endsAt": "2026-06-22T09:58:40.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-3A6DE98CBA",
+      "activityId": "REVIEW-0280",
+      "assetId": "asset-041",
+      "actor": "svc-029",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-01T09:21:54.000Z",
+      "endsAt": "2026-06-01T10:21:54.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-674BE357AF",
+      "activityId": "REVIEW-0334",
+      "assetId": "asset-047",
+      "actor": "svc-011",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-27T09:58:48.000Z",
+      "endsAt": "2026-06-27T10:58:48.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-9E2A8889BF",
+      "activityId": "REVIEW-0196",
+      "assetId": "asset-999",
+      "actor": "svc-017",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-01T06:56:43.000Z",
+      "endsAt": "2026-06-01T08:56:43.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-E5BE48C520",
+      "activityId": "REVIEW-0182",
+      "assetId": "asset-039",
+      "actor": "svc-003",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-15T09:32:09.000Z",
+      "endsAt": "2026-06-15T10:32:09.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-E21763CCAA",
+      "activityId": "REVIEW-0026",
+      "assetId": "asset-027",
+      "actor": "svc-027",
+      "owner": "Security Engineering",
+      "approvedBy": "requestor-only",
+      "status": "APPROVED",
+      "startsAt": "2026-06-27T06:17:46.000Z",
+      "endsAt": "2026-06-27T08:17:46.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-7880E204BE",
+      "activityId": "REVIEW-0320",
+      "assetId": "asset-033",
+      "actor": "svc-033",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-13T09:49:14.000Z",
+      "endsAt": "2026-06-13T10:49:14.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-77E867A5D5",
+      "activityId": "REVIEW-0054",
+      "assetId": "asset-007",
+      "actor": "svc-019",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-27T09:21:54.000Z",
+      "endsAt": "2026-06-27T10:21:54.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-8881B0083E",
+      "activityId": "REVIEW-0329",
+      "assetId": "asset-042",
+      "actor": "svc-006",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-22T09:55:23.000Z",
+      "endsAt": "2026-06-22T10:55:23.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-8AA3B0EF17",
+      "activityId": "REVIEW-0036",
+      "assetId": "asset-037",
+      "actor": "svc-001",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-09T09:09:36.000Z",
+      "endsAt": "2026-06-09T10:09:36.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-C5E3081E8B",
+      "activityId": "REVIEW-0137",
+      "assetId": "asset-042",
+      "actor": "svc-030",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-26T09:01:24.000Z",
+      "endsAt": "2026-06-26T10:01:24.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-F1A64C160F",
+      "activityId": "REVIEW-0384",
+      "assetId": "asset-999",
+      "actor": "svc-025",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-21T06:30:45.000Z",
+      "endsAt": "2026-06-21T08:30:45.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-C37C0AEADF",
+      "activityId": "REVIEW-0127",
+      "assetId": "asset-032",
+      "actor": "svc-020",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "PENDING",
+      "startsAt": "2026-06-16T06:09:34.000Z",
+      "endsAt": "2026-06-16T08:09:34.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-7E3B2295AE",
+      "activityId": "REVIEW-0033",
+      "assetId": "asset-034",
+      "actor": "svc-034",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-06T09:07:33.000Z",
+      "endsAt": "2026-06-06T10:07:33.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-CA1083F044",
+      "activityId": "REVIEW-0017",
+      "assetId": "asset-018",
+      "actor": "svc-018",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-18T08:56:37.000Z",
+      "endsAt": "2026-06-18T09:56:37.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-5223078B55",
+      "activityId": "REVIEW-0355",
+      "assetId": "asset-020",
+      "actor": "svc-032",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-20T08:55:56.000Z",
+      "endsAt": "2026-06-20T09:55:56.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-A923AE7C37",
+      "activityId": "REVIEW-0097",
+      "assetId": "asset-002",
+      "actor": "svc-026",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-14T09:51:17.000Z",
+      "endsAt": "2026-06-14T10:51:17.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-3EF9544273",
+      "activityId": "REVIEW-0129",
+      "assetId": "asset-034",
+      "actor": "svc-022",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-18T08:55:56.000Z",
+      "endsAt": "2026-06-18T09:55:56.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-937AC03A03",
+      "activityId": "REVIEW-0016",
+      "assetId": "asset-017",
+      "actor": "svc-017",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-17T08:55:56.000Z",
+      "endsAt": "2026-06-17T09:55:56.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-B0E03A440A",
+      "activityId": "REVIEW-0028",
+      "assetId": "asset-999",
+      "actor": "svc-029",
+      "owner": "Platform",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-01T06:19:08.000Z",
+      "endsAt": "2026-06-01T08:19:08.000Z",
+      "purpose": "Approved maintenance and validation window"
+    },
+    {
+      "changeId": "CHG-9F230E05A1",
+      "activityId": "REVIEW-0113",
+      "assetId": "asset-018",
+      "actor": "svc-006",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-02T08:45:00.000Z",
+      "endsAt": "2026-06-02T09:45:00.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-B3A19991BD",
+      "activityId": "REVIEW-0245",
+      "assetId": "asset-006",
+      "actor": "svc-unapproved",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-22T06:12:59.000Z",
+      "endsAt": "2026-06-22T08:12:59.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-A1DC5F8D6F",
+      "activityId": "REVIEW-0305",
+      "assetId": "asset-018",
+      "actor": "svc-018",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-26T09:38:59.000Z",
+      "endsAt": "2026-06-26T10:38:59.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-B56574D176",
+      "activityId": "REVIEW-0174",
+      "assetId": "asset-031",
+      "actor": "svc-031",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-07T09:26:41.000Z",
+      "endsAt": "2026-06-07T10:26:41.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-81B0206383",
+      "activityId": "REVIEW-0255",
+      "assetId": "asset-016",
+      "actor": "svc-004",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-04T09:04:49.000Z",
+      "endsAt": "2026-06-04T10:04:49.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-15B932258E",
+      "activityId": "REVIEW-0114",
+      "assetId": "asset-019",
+      "actor": "svc-007",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-03T08:45:41.000Z",
+      "endsAt": "2026-06-03T09:45:41.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-7A88CED99F",
+      "activityId": "REVIEW-0265",
+      "assetId": "asset-026",
+      "actor": "svc-014",
+      "owner": "IT Operations",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-14T09:11:39.000Z",
+      "endsAt": "2026-06-14T10:11:39.000Z",
+      "purpose": "Controlled migration rehearsal"
+    },
+    {
+      "changeId": "CHG-E67D0BBCA5",
+      "activityId": "REVIEW-0134",
+      "assetId": "asset-039",
+      "actor": "svc-027",
+      "owner": "Security Engineering",
+      "approvedBy": "requestor-only",
+      "status": "APPROVED",
+      "startsAt": "2026-06-23T06:14:21.000Z",
+      "endsAt": "2026-06-23T08:14:21.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-1AEFFC580D",
+      "activityId": "REVIEW-0090",
+      "assetId": "asset-043",
+      "actor": "svc-019",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-07T09:46:30.000Z",
+      "endsAt": "2026-06-07T10:46:30.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    },
+    {
+      "changeId": "CHG-AF0D67FAD4",
+      "activityId": "REVIEW-0183",
+      "assetId": "asset-040",
+      "actor": "svc-004",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-16T09:32:50.000Z",
+      "endsAt": "2026-06-16T10:32:50.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-F618788B78",
+      "activityId": "REVIEW-0143",
+      "assetId": "asset-048",
+      "actor": "svc-036",
+      "owner": "Data Services",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-04T09:05:30.000Z",
+      "endsAt": "2026-06-04T10:05:30.000Z",
+      "purpose": "Scheduled resilience exercise"
+    },
+    {
+      "changeId": "CHG-B23BCE0983",
+      "activityId": "REVIEW-0354",
+      "assetId": "asset-019",
+      "actor": "svc-031",
+      "owner": "Security Engineering",
+      "approvedBy": "change-board",
+      "status": "APPROVED",
+      "startsAt": "2026-06-19T08:55:15.000Z",
+      "endsAt": "2026-06-19T09:55:15.000Z",
+      "purpose": "Authorized inventory and deployment activity"
+    }
+  ]
+}
