@@ -2,7 +2,6 @@
 
 A production-style Security Operations Center (SOC) pipeline built in **Python** and **DuckDB** that normalizes multi-source security telemetry, triages suspicious activity against change-management records, and reconstructs multi-stage attack campaigns on a unified timeline.
 
-**Intern Code:** UBI-2026-0083 · **Track:** SOC Analysis, Stage 5 · **Evidence Marker:** `UBI-A5-74780BE0F17F`
 
 ---
 
