@@ -1,8 +1,5 @@
-# UBI Stage 5 SOC Hunt Engine
-
-**Intern Code**: UBI-2026-0083
-**Variant**: D5                         
-**Evidence Marker**: UBI-A5-74780BE0F17F                           
+ SOC Hunt Engine
+                         
 **Repository URL**: https://github.com/Akeju-ak/soc-hunt-engine.git
 
 ---
