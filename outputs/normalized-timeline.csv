@@ -1,10 +1,10 @@
 event_id,event_time,source_type,identity,asset_id,event_action,raw_locator
-EVT-AUTH-101,2026-07-22 09:00:15,auth,user-external-attacker,asset-003,failed_login_burst,auth.v1.json:101
-EVT-AUTH-102,2026-07-22 09:05:00,auth,user-external-attacker,asset-003,login_success,auth.v1.json:102
-EVT-EDR-103,2026-07-22 09:06:12,edr,user-external-attacker,asset-003,powershell_encoded_command,edr.v2.json:103
-EVT-WEB-201,2026-07-22 10:15:00,web,svc-019,asset-022,http_file_download,web.v1.json:201
-EVT-DNS-202,2026-07-22 10:16:30,dns,svc-019,asset-022,c2_domain_lookup,dns.v3.json:202
-EVT-FW-203,2026-07-22 10:18:00,firewall,svc-019,asset-022,firewall_outbound_block,fw.v1.json:203
-EVT-EDR-301,2026-07-22 11:30:00,edr,admin-compromised,asset-001,mimikatz_lsass_dump,edr.v1.json:301
-EVT-AUTH-302,2026-07-22 11:32:15,auth,admin-compromised,asset-001,scheduled_task_created,auth.v2.json:302
-EVT-FW-303,2026-07-22 11:35:00,firewall,admin-compromised,asset-001,log_clear_attempt,fw.v2.json:303
+EVT-AUTH-18,2026-07-22 09:00:15,auth,amina.analyst,asset-003,failed_login_burst,auth.v1.json:18
+EVT-AUTH-19,2026-07-22 09:05:00,auth,amina.analyst,asset-003,login_success,auth.v1.json:19
+EVT-EDR-321,2026-07-22 09:06:12,edr,amina.analyst,asset-003,powershell_encoded_command,edr.v2.json:321
+EVT-WEB-104,2026-07-22 10:15:00,web,svc-019,asset-022,archive_creation_support_data,web.v1.json:104
+EVT-DNS-205,2026-07-22 10:16:30,dns,svc-019,asset-022,query_sync_v1_updates,dns.v3.json:205
+EVT-FIREWALL-88,2026-07-22 10:18:00,firewall,svc-019,asset-022,outbound_exfil_transfer_block,fw.v1.json:88
+EVT-EDR-412,2026-07-22 11:30:00,edr,nora.contractor,asset-001,usb_v1_media_mount,edr.v1.json:412
+EVT-AUTH-92,2026-07-22 11:32:15,auth,nora.contractor,asset-001,payroll_file_copy,auth.v2.json:92
+EVT-FIREWALL-150,2026-07-22 11:35:00,firewall,nora.contractor,asset-001,cleanup_archive_deletion,fw.v2.json:150

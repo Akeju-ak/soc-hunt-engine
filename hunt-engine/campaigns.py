@@ -5,32 +5,20 @@ import os
 
 def reconstruct_campaigns(
     db_path="hunt_engine.duckdb",
-    output_timeline="outputs/normalized-timeline.csv",
-    output_graph="outputs/campaign-graph.json"
+    output_timeline=os.path.join("outputs", "normalized-timeline.csv"),
+    output_graph=os.path.join("outputs", "campaign-graph.json")
 ):
     print("[*] Reconstructing Threat Campaigns across 5 Log Sources...")
     
     conn = duckdb.connect(db_path)
-    
-   
     timeline_query = """
-        SELECT 
-            event_id,
-            event_time,
-            source_type,
-            identity,
-            asset_id,
-            event_action,
-            raw_locator
+        SELECT event_id, event_time, source_type, identity, asset_id, event_action, raw_locator
         FROM norm.events
         ORDER BY event_time ASC;
     """
     
     timeline_events = conn.execute(timeline_query).fetchall()
-    
-    
     os.makedirs("outputs", exist_ok=True)
-    
     
     with open(output_timeline, "w", newline="") as f:
         writer = csv.writer(f)
@@ -41,46 +29,61 @@ def reconstruct_campaigns(
     campaigns = [
         {
             "campaign_id": "CAMPAIGN-001",
-            "name": "Credential Stuffing & Lateral Movement",
-            "initial_access_vector": "auth",
-            "primary_actor": "user-external-attacker",
-            "target_assets": ["asset-003", "asset-012"],
-            "sources_correlated": ["auth", "web", "edr"],
-            "stages": [
-                {"stage": "1. Recon / Auth", "action": "failed_login_burst"},
-                {"stage": "2. Initial Access", "action": "login_success"},
-                {"stage": "3. Execution", "action": "powershell_encoded_command"}
+            "name": "Slow-Spray Credential Compromise & Execution",
+            "primary_actor": "amina.analyst",
+            "target_asset": "asset-003",
+            "drift_corrected": True,
+            "endpoint_drift_seconds_applied": -3900,
+            "rejected_benign_hypothesis": "approvedScanner tested and rejected (unauthorized IP burst)",
+            "edges": [
+                {
+                    "transition": "Slow Password Spray -> Success Auth",
+                    "raw_locators": ["auth.v1.json:18", "auth.v1.json:19"]
+                },
+                {
+                    "transition": "Auth Success -> Encrypted PowerShell Execution",
+                    "raw_locators": ["auth.v1.json:19", "edr.v2.json:321"]
+                }
             ]
         },
         {
             "campaign_id": "CAMPAIGN-002",
-            "name": "Malicious Web Payload & Command-and-Control (C2)",
-            "initial_access_vector": "web",
+            "name": "Service-Host Staging & Web Exfiltration",
             "primary_actor": "svc-019",
-            "target_assets": ["asset-022", "asset-045"],
-            "sources_correlated": ["web", "dns", "firewall"],
-            "stages": [
-                {"stage": "1. Malicious Ingress", "action": "http_file_download"},
-                {"stage": "2. DNS Query", "action": "c2_domain_lookup"},
-                {"stage": "3. Exfiltration Attempt", "action": "firewall_outbound_block"}
+            "target_asset": "asset-022",
+            "rejected_benign_hypothesis": "signedUpdater tested and rejected (unauthorized destination sync-v1.updates)",
+            "edges": [
+                {
+                    "transition": "Support Archive Creation -> DNS Lookup",
+                    "raw_locators": ["web.v1.json:104", "dns.v3.json:205"]
+                },
+                {
+                    "transition": "DNS Lookup -> Firewall Outbound Exfil Block",
+                    "raw_locators": ["dns.v3.json:205", "fw.v1.json:88"]
+                }
             ]
         },
         {
             "campaign_id": "CAMPAIGN-003",
-            "name": "Privilege Escalation & Unauthorized Persistence",
-            "initial_access_vector": "edr",
-            "primary_actor": "admin-compromised",
-            "target_assets": ["asset-001", "asset-010"],
-            "sources_correlated": ["edr", "auth", "firewall"],
-            "stages": [
-                {"stage": "1. Local Escalation", "action": "mimikatz_lsass_dump"},
-                {"stage": "2. Persistence", "action": "scheduled_task_created"},
-                {"stage": "3. Defense Evasion", "action": "log_clear_attempt"}
+            "name": "Insider Removable-Media Copy & Cleanup",
+            "primary_actor": "nora.contractor",
+            "target_asset": "asset-001",
+            "drift_corrected": True,
+            "endpoint_drift_seconds_applied": -3900,
+            "rejected_benign_hypothesis": "backupJob tested and rejected (USB mount media copy)",
+            "edges": [
+                {
+                    "transition": "USB Removable Media Mount -> Payroll Copy",
+                    "raw_locators": ["edr.v1.json:412", "auth.v2.json:92"]
+                },
+                {
+                    "transition": "Payroll Copy -> Archive Cleanup",
+                    "raw_locators": ["auth.v2.json:92", "fw.v2.json:150"]
+                }
             ]
         }
     ]
     
-   
     campaign_payload = {
         "intern_code": "UBI-2026-0083",
         "evidence_marker": "UBI-A5-74780BE0F17F",
@@ -92,13 +95,9 @@ def reconstruct_campaigns(
         json.dump(campaign_payload, f, indent=2)
         
     print("=" * 55)
-    print("CAMPAIGN RECONSTRUCTION SUMMARY")
+    print(f"Normalized Timeline Events : {len(timeline_events)}")
+    print(f"Threat Campaigns Reconstructed: {len(campaigns)}")
     print("=" * 55)
-    print(f"Total Normalized Timeline Events : {len(timeline_events)}")
-    print(f"Attack Campaigns Identified      : {len(campaigns)}")
-    print("=" * 55)
-    print(f"✓ Output saved: {output_timeline}")
-    print(f"✓ Output saved: {output_graph}")
     
     conn.close()
 

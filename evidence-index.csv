@@ -1,0 +1,7 @@
+file_name,source_type,format,description,raw_locator_example
+auth.v1.json,auth,json,Legacy authentication attempt logs,auth.v1.json:101
+web.v1.json,web,json,Web server HTTP access and request logs,web.v1.json:201
+dns.v3.json,dns,json,Internal and external DNS resolution query logs,dns.v3.json:202
+fw.v1.json,firewall,json,Network firewall packet flow and drop logs,fw.v1.json:203
+edr.v2.json,edr,json,Host process creation and execution logs,edr.v2.json:103
+ubi-2026-0083-stage-5-discrepancy.json,triage,json,Private assignment discrepancy review dataset,ubi-2026-0083-stage-5-discrepancy.json:candidates

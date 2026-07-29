@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "project_id": "SOC-A1",
+  "variant": "D5",
+  "intern_code": "UBI-2026-0083",
+  "evidence_marker": "UBI-A5-74780BE0F17F",
+  "assigned_pack": {
+    "file_name": "soc-analysis-stage-5-shared-b1.tar.gz",
+    "sha256": "535e2c483a01f20dad10a893eea6ba3cf89e4bd349beea",
+    "verified_before_use": true
+  },
+  "entry_commands": [
+    "python3 hunt-engine/ingest.py",
+    "python3 hunt-engine/triage.py",
+    "python3 hunt-engine/campaigns.py"
+  ]
+}

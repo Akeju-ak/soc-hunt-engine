@@ -1,0 +1,5 @@
+metric,count_value
+total_raw_records,10
+accepted_normalized_records,9
+quarantined_records,1
+duplicate_records,0

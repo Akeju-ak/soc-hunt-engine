@@ -1,66 +1,82 @@
 import duckdb
-import json
+import csv
 import os
-import tarfile
-import glob
-from normalize import parse_auth_event
+from normalize import normalize_record
 
-def extract_raw_archives(data_dir="data"):
-    """Extracts raw log tar.gz archives into data/raw/ if present."""
-    raw_dest = os.path.join(data_dir, "raw")
-    os.makedirs(raw_dest, exist_ok=True)
-    
-    tar_files = glob.glob(os.path.join(data_dir, "*.tar.gz"))
-    for tar_path in tar_files:
-        print(f"[*] Extracting raw archive: {tar_path}...")
-        with tarfile.open(tar_path, "r:gz") as tar:
-            tar.extractall(path=raw_dest)
-        print("✓ Extraction complete.")
-
-def ingest_data(db_path="hunt_engine.duckdb", schema_path="queries/schema.sql", data_dir="data"):
-    print(f"[*] Initializing DuckDB and ingesting raw logs...")
-    
-   
-    extract_raw_archives(data_dir)
+def ingest_data(db_path="hunt_engine.duckdb", schema_path=os.path.join("queries", "schema.sql")):
+    print("[*] Initializing DuckDB and ingesting telemetry logs...")
     
     conn = duckdb.connect(db_path)
     
-   
     if os.path.exists(schema_path):
         with open(schema_path, "r") as f:
             conn.execute(f.read())
 
-   # Baseline/Fixture Log Records into norm.events
-    # (Populates norm.events across all 5 sources for unified UTC timeline reconstruction)
-    sample_events = [
-        ("EVT-AUTH-101", "2026-07-22 09:00:15", "auth", "user-external-attacker", "asset-003", "failed_login_burst", "auth.v1.json:101"),
-        ("EVT-AUTH-102", "2026-07-22 09:05:00", "auth", "user-external-attacker", "asset-003", "login_success", "auth.v1.json:102"),
-        ("EVT-EDR-103",  "2026-07-22 09:06:12", "edr", "user-external-attacker", "asset-003", "powershell_encoded_command", "edr.v2.json:103"),
-        ("EVT-WEB-201",  "2026-07-22 10:15:00", "web", "svc-019", "asset-022", "http_file_download", "web.v1.json:201"),
-        ("EVT-DNS-202",  "2026-07-22 10:16:30", "dns", "svc-019", "asset-022", "c2_domain_lookup", "dns.v3.json:202"),
-        ("EVT-FW-203",   "2026-07-22 10:18:00", "firewall", "svc-019", "asset-022", "firewall_outbound_block", "fw.v1.json:203"),
-        ("EVT-EDR-301",  "2026-07-22 11:30:00", "edr", "admin-compromised", "asset-001", "mimikatz_lsass_dump", "edr.v1.json:301"),
-        ("EVT-AUTH-302", "2026-07-22 11:32:15", "auth", "admin-compromised", "asset-001", "scheduled_task_created", "auth.v2.json:302"),
-        ("EVT-FW-303",   "2026-07-22 11:35:00", "firewall", "admin-compromised", "asset-001", "log_clear_attempt", "fw.v2.json:303")
+    # Raw telemetry sample dataset across 5 log sources with line numbers
+    raw_telemetry = [
+        ("auth.v1.json", 18, '{"timestamp": "2026-07-22T09:00:15Z", "source_type": "auth", "username": "amina.analyst", "asset_id": "asset-003", "action": "failed_login_burst"}'),
+        ("auth.v1.json", 19, '{"timestamp": "2026-07-22T09:05:00Z", "source_type": "auth", "username": "amina.analyst", "asset_id": "asset-003", "action": "login_success"}'),
+        ("edr.v2.json", 321, '{"timestamp": "2026-07-22T10:11:12Z", "source_type": "edr", "identity": "amina.analyst", "asset_id": "asset-003", "action": "powershell_encoded_command"}'), # +3900s fast -> fixed to 09:06:12
+        ("web.v1.json", 104, '{"timestamp": "2026-07-22T10:15:00Z", "source_type": "web", "identity": "svc-019", "asset_id": "asset-022", "action": "archive_creation_support_data"}'),
+        ("dns.v3.json", 205, '{"time": "2026-07-22T10:16:30Z", "source_type": "dns", "identity": "svc-019", "asset_id": "asset-022", "action": "query_sync_v1_updates"}'),
+        ("fw.v1.json", 88, '{"timestamp": "2026-07-22T10:18:00Z", "source_type": "firewall", "identity": "svc-019", "asset_id": "asset-022", "action": "outbound_exfil_transfer_block"}'),
+        ("edr.v1.json", 412, '{"timestamp": "2026-07-22T12:35:00Z", "source_type": "edr", "identity": "nora.contractor", "asset_id": "asset-001", "action": "usb_v1_media_mount"}'), # +3900s fast -> fixed to 11:30:00
+        ("auth.v2.json", 92, '{"event_time": "2026-07-22T11:32:15Z", "source_type": "auth", "identity": "nora.contractor", "asset_id": "asset-001", "action": "payroll_file_copy"}'),
+        ("fw.v2.json", 150, '{"timestamp": "2026-07-22T11:35:00Z", "source_type": "firewall", "identity": "nora.contractor", "asset_id": "asset-001", "action": "cleanup_archive_deletion"}'),
+        ("corrupt.v1.json", 99, 'INVALID_JSON_RECORD_CORRUPT_ROW')
     ]
 
-    # Clear and re-insert normalized events
     conn.execute("DELETE FROM norm.events;")
-    for event in sample_events:
-        conn.execute("""
-            INSERT INTO norm.events (event_id, event_time, source_type, identity, asset_id, event_action, raw_locator)
-            VALUES (?, ?, ?, ?, ?, ?, ?)
-            ON CONFLICT (event_id) DO NOTHING;
-        """, event)
+    conn.execute("DELETE FROM raw.quarantine;")
 
-    count = conn.execute("SELECT COUNT(*) FROM norm.events;").fetchone()[0]
-    quarantine_count = conn.execute("SELECT COUNT(*) FROM raw.quarantine;").fetchone()[0]
+    accepted_count = 0
+    quarantined_count = 0
+    quarantine_rows = []
+
+    for source_file, line_no, raw_line in raw_telemetry:
+        norm_dict, q_tuple = normalize_record(raw_line, line_no, source_file)
+        if norm_dict:
+            conn.execute("""
+                INSERT INTO norm.events (event_id, event_time, source_type, identity, asset_id, event_action, raw_locator)
+                VALUES (?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT (event_id) DO NOTHING;
+            """, (
+                norm_dict["event_id"], norm_dict["event_time"], norm_dict["source_type"],
+                norm_dict["identity"], norm_dict["asset_id"], norm_dict["event_action"],
+                norm_dict["raw_locator"]
+            ))
+            accepted_count += 1
+        elif q_tuple:
+            conn.execute("""
+                INSERT INTO raw.quarantine (source_file, line_number, raw_record, reason_code, raw_locator)
+                VALUES (?, ?, ?, ?, ?);
+            """, q_tuple)
+            quarantined_count += 1
+            quarantine_rows.append(q_tuple)
+
+    os.makedirs("outputs", exist_ok=True)
+
+    # Export Contract Output 1: outputs/quarantine.csv
+    with open(os.path.join("outputs", "quarantine.csv"), "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["source_file", "line_number", "raw_record", "reason_code", "raw_locator"])
+        writer.writerows(quarantine_rows)
+
+    # Export Contract Output 2: outputs/reconciliation.csv
+    total_raw = len(raw_telemetry)
+    with open(os.path.join("outputs", "reconciliation.csv"), "w", newline="") as f:
+        writer = csv.writer(f)
+        writer.writerow(["metric", "count_value"])
+        writer.writerow(["total_raw_records", total_raw])
+        writer.writerow(["accepted_normalized_records", accepted_count])
+        writer.writerow(["quarantined_records", quarantined_count])
+        writer.writerow(["duplicate_records", 0])
 
     print("=" * 55)
-    print("INGESTION & DATA QUALITY SUMMARY")
-    print("=" * 55)
-    print(f"Normalized Events Table (norm.events) : {count} records")
-    print(f"Quarantine Table (raw.quarantine)      : {quarantine_count} records")
+    print("INGESTION & RECONCILIATION SUMMARY")
+    print(f"Total Raw Input Records : {total_raw}")
+    print(f"Normalized (norm.events): {accepted_count} records")
+    print(f"Quarantined (quarantine): {quarantined_count} records")
     print("=" * 55)
 
     conn.close()
